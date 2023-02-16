@@ -1,12 +1,5 @@
-/*!
-* Start Bootstrap - Resume v7.0.5 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
 
+/// side Nav
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -32,3 +25,16 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+//------------------API CALL ----------------------//
+
+fetch('https://2lb20eq6lj.execute-api.us-east-1.amazonaws.com/counter',{method: 'POST',})
+  .then(response => response.json())
+  .then(data => {
+    // Update the div element with the retrieved number
+    const numberDisplay = document.getElementById('visitor-display');
+    numberDisplay.textContent = data.body.total_visitor;
+  })
+  .catch(error => {
+    console.error(error);
+  });
