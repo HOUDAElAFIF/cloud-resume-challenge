@@ -15,13 +15,14 @@ I created a basic version of my resume using **HTML/CSS**, which I then stored i
 ## 2- Building the Backend :
  - Services :  ** API Gateway, Lambda, DynamoDB, JavaScript **
   ### ***a- Create a lambda function ta communicate whith the database to increment the vistor counter***
-  ![Link to lambda.py file](file://./lambda.py)
+  ![Link to lambda.py file](./lambda.py)
+
   ### ***b- Trigger your Lambda function from the outside world ***
-  - --> Put an **API Gateway** route in front of your **Lambda** function
-  ![Screenshot -->](file://Ressources/a.png)
-  ![Screenshot -->](file://Ressources/b.png)
+  - Put an **API Gateway** route in front of your **Lambda** function
+  ![Screenshot -->](./Ressources/a.png)
+  ![Screenshot -->](/Ressources/b.png)
 **Testing my api endpoint using postman**
-  ![Screenshot -->](file://Ressources/c.png)
+  ![Screenshot -->](./Ressources/c.png)
 
 
 
