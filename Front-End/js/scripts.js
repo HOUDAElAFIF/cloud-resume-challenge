@@ -31,9 +31,7 @@ window.addEventListener('DOMContentLoaded', event => {
 fetch('https://2lb20eq6lj.execute-api.us-east-1.amazonaws.com/counter',{method: 'POST',})
   .then(response => response.json())
   .then(data => {
-    // Update the div element with the retrieved number
-    const numberDisplay = document.getElementById('visitor-display');
-    numberDisplay.textContent = data.body.total_visitor;
+    document.getElementById('visitor_display').innerHTML = 'Total Page Views:  ' + data['total_visitor']
   })
   .catch(error => {
     console.error(error);
